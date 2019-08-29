@@ -70,7 +70,6 @@ def load_data(city, month, day):
     Returns:
         df - pandas DataFrame containing city data filtered by month and day
     """
-
     # load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
 
@@ -149,7 +148,6 @@ def station_stats(df):
 
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
-
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
@@ -168,7 +166,6 @@ def trip_duration_stats(df):
 
 def user_stats(df, city):
     """Displays statistics on bikeshare users."""
-
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
@@ -180,7 +177,7 @@ def user_stats(df, city):
         print(df['Gender'].value_counts())
     else:
         print('No gender data for Washington!')
-
+		
     # TO DO: Display earliest, most recent, and most common year of birth
     if city == 'chicago' or city == 'new york city':
         print('Earlist Birth Year: {}'.format(int(df['Birth Year'].min())))
@@ -193,8 +190,8 @@ def user_stats(df, city):
 
 def display_data(df,month,day):
     index = 0
+	
     """Displays random data if the user wants to. Else the look breaks."""
-
     while True:
         decision = str(input("Do you want to print raw data? Please type 'yes' or 'no': ").lower())
         if decision != 'yes' and decision != 'no':
@@ -208,9 +205,12 @@ def display_data(df,month,day):
 
 
 
-
-
+			
+			
+			
+			
 def main():
+
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
@@ -224,7 +224,6 @@ def main():
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
-
 
 if __name__ == "__main__":
 	main()
