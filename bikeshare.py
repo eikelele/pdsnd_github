@@ -5,7 +5,9 @@ import sys
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
-              'washington': 'washington.csv' }
+              'washington': 'washington.csv',
+			  'san_francisco': 'san_francisco.csv'
+			  }
 
 
 def get_filters():
@@ -176,7 +178,7 @@ def user_stats(df, city):
     if city == 'chicago' or city == 'new york city':
         print(df['Gender'].value_counts())
     else:
-        print('No gender data for Washington!')
+        print('No gender data for Washington and San Francisco!')
 		
     # TO DO: Display earliest, most recent, and most common year of birth
     if city == 'chicago' or city == 'new york city':
@@ -184,7 +186,7 @@ def user_stats(df, city):
         print('Most recent Birth Year: {}'.format(int(df['Birth Year'].max())))
         print('Most common Birth Year: {}'.format(int(df['Birth Year'].mode().item())))
     else:
-        print('No birth data for Washington!')
+        print('No birth data for Washington and San Francisco!')
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
