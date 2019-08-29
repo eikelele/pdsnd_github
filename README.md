@@ -11,8 +11,11 @@ The user can decide on on the city, the month and the day of week. The request c
 
 
 ### Files used
-Include the files used
+bikeshare.py
+chicaco.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Credits to the Udacity Crew for allowing me learn such new skills!
 
